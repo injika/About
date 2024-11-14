@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin:  0;
+}
+
+header {
+  padding: 10px;
+  text-align: left;
+  margin-right: 20%;
+}
+
+.header-left h2 {
+  margin-top: 30px;
+  display: inline-block;
+  margin-left: 10%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+font-weight: bold;
+}
+
+.header-left a {
+  color: rgb(38, 74, 112);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px; /* Set a maximum width to avoid overly long lines */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  text-align: left;
+}
+
+
+h1 {
+  color: #333;
+  margin: 20px 0 10px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+h2 {
+  line-height: 2;
+  color: #333;
+  margin: 20px 0 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  margin: 20px 80px 10px;
+}
+.paragraph{
+
+  text-align: center;
+
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: justify;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+  margin: 40px 0 50px;
+  align-items: center;
+}
+
+.h1{
+  margin-top: 20%;
+}
+
+
+
+
+.responsive1 {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px; /* Adds rounded corners */
+  transition: transform 0.3s ease-in-out; /* Adds a smooth transition */
+
+  width: 100%;
+  height: auto;
+  margin: 20px 0 50px;
+
+}
+
+
+
+.ideation {
+    background-color: #f0f0f0; /* Choose your desired background color */
+    padding: 20px;
+    margin: 10% 0 10%;
+  }
+  
+/*slider2*/
+.image-container {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+}
+
+.image-container img {
+  width: 48%; /* Set width to ensure space for two images with a small gap between */
+}
+
+iframe{
+  align-items: center;
+}
+.con{
+  color: #333;
+  margin-top: 20%;
+  text-align: left;
+}
+.end{
+  margin-bottom: 30%;
+}
+
+.logo-link {
+  text-decoration: none; 
+  color: rgb(38, 74, 112);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+font-weight: bold;
+}
+
+.logo-link:hover {
+  cursor: pointer; 
+  color: #cb5d5d;
+  ; 
+}
+.prototype {
+  align-items: center;
+  text-align: center;
+}
+
+.responsive2 {
+  display: block; /* لضمان أن الصورة تتوسط الصفحة */
+  margin: 0 auto; /* لوضع الصورة في المنتصف */
+  max-width: 100%; /* لضبط الحجم تلقائيًا بحيث لا يتجاوز العرض */
+  border-radius: 8px;
+}
+
+.button {
+  background-color:#cb5d5d;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px; 
+  font-size: 20px;
+padding: 12px 80px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+text-align: center;
+text-decoration: none;
+}
+.button:hover {
+  background-color: white ;
+color: #cb5d5d;
+border: 1px solid #f0bbbb;
+
+}
+
+.socialicons {
+  justify-content: right;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+ 
+  justify-content: flex-end;
+  margin-top: 30px;
+  display: inline-block;
+  margin-right: 10%;
+  list-style-type: none; 
+  padding: 0;
+  
+}
+
+.socialicons a {
+  
+  margin: 0 10px ;
+  font-size: 24px;
+  color: rgb(38, 74, 112);
+
+}
+
+.socialicons li {
+  color:  #cb5d5d;
+ justify-content: space-between;
+  font-size: 24px;
+}
+.socialicons :hover {
+  color: #fe8989;
+}
