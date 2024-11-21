@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin:  0;
+  
 }
 
 header {
@@ -206,4 +207,83 @@ border: 1px solid #f0bbbb;
 }
 .socialicons :hover {
   color: #fe8989;
+}
+
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  color: #fe8989;
+  padding: 40px 60px;
+  background-color: #f5d7d7;
+
+}
+
+.reset
+{
+  padding: 15px 20px;
+  color: #fff;
+  background: rgb(128, 128, 218);
+  border: none;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius:9px ;
+  font-family: 'Courier New', Courier, monospace;
+
+
+}
+.reset:focus
+{
+color: #fff;
+background: rgb(81, 81, 232);
+font-family: 'Courier New', Courier, monospace;
+
+}
+.game
+{
+  width: 430px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+
+}
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background: #fff;
+  transition: transform 0.5s ease; /* Adjusted transition */
+}
+
+.item.boxOpen {
+  transform: rotateY(180deg); /* Adjusted transform */
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(87, 87, 192);
+  /*opacity:0.85 ; */
+  transition: transform 0.5s ease; 
+  transform: rotateY(0deg); 
+  backface-visibility: hidden;
+}
+
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(180deg); 
 }
