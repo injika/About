@@ -275,7 +275,7 @@ border: 1px solid #f0bbbb;
 
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+input[type=text],[type=email], select, textarea{
   width: 70%;
   padding: 10px;
   margin: 10px 0;
@@ -294,7 +294,7 @@ label {
 }
 
 /* Style the submit button */
-input[type=SendMessage] {
+input[type=submit] {
   background-color: #cb5d5d;
   color: white;
   padding: 12px 10px;
@@ -306,7 +306,7 @@ align-items: center;
 margin-right: 38%;
 
 }
-input[type=SendMessage]:hover{
+input[type=submit]:hover{
   background-color: white ;
   color: #cb5d5d;
   border: 1px solid #f0bbbb;
