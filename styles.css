@@ -8,7 +8,8 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin:  0;
-  
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 header {
@@ -75,55 +76,9 @@ p {
   align-items: center;
 }
 
-.h1{
-  margin-top: 20%;
-}
 
 
 
-
-.responsive1 {
-  width: 100%;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 8px; /* Adds rounded corners */
-  transition: transform 0.3s ease-in-out; /* Adds a smooth transition */
-
-  width: 100%;
-  height: auto;
-  margin: 20px 0 50px;
-
-}
-
-
-
-.ideation {
-    background-color: #f0f0f0; /* Choose your desired background color */
-    padding: 20px;
-    margin: 10% 0 10%;
-  }
-  
-/*slider2*/
-.image-container {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Align items vertically */
-}
-
-.image-container img {
-  width: 48%; /* Set width to ensure space for two images with a small gap between */
-}
-
-iframe{
-  align-items: center;
-}
-.con{
-  color: #333;
-  margin-top: 20%;
-  text-align: left;
-}
-.end{
-  margin-bottom: 30%;
-}
 
 .logo-link {
   text-decoration: none; 
@@ -137,17 +92,8 @@ font-weight: bold;
   color: #cb5d5d;
   ; 
 }
-.prototype {
-  align-items: center;
-  text-align: center;
-}
 
-.responsive2 {
-  display: block; /* لضمان أن الصورة تتوسط الصفحة */
-  margin: 0 auto; /* لوضع الصورة في المنتصف */
-  max-width: 100%; /* لضبط الحجم تلقائيًا بحيث لا يتجاوز العرض */
-  border-radius: 8px;
-}
+
 
 .button {
   background-color:#cb5d5d;
@@ -210,80 +156,233 @@ border: 1px solid #f0bbbb;
 }
 
 
+
+
+
 .container {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  padding: 20px;
+  gap: 70px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0px;
+  line-height: 1.6;
+}
+
+.image-section {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  color: #fe8989;
-  padding: 40px 60px;
-  background-color: #f5d7d7;
-
-}
-
-.reset
-{
-  padding: 15px 20px;
-  color: #fff;
-  background: rgb(128, 128, 218);
-  border: none;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius:9px ;
-  font-family: 'Courier New', Courier, monospace;
-
-
-}
-.reset:focus
-{
-color: #fff;
-background: rgb(81, 81, 232);
-font-family: 'Courier New', Courier, monospace;
-
-}
-.game
-{
-  width: 430px;
-  height: 430px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  transform-style: preserve-3d;
-  perspective: 500px;
-
-}
-.item {
   position: relative;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-  background: #fff;
-  transition: transform 0.5s ease; /* Adjusted transition */
 }
 
-.item.boxOpen {
-  transform: rotateY(180deg); /* Adjusted transform */
+.image-section img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.item::after {
-  content: '';
+.image-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-overlay {
   position: absolute;
-  inset: 0;
-  background: rgb(87, 87, 192);
-  /*opacity:0.85 ; */
-  transition: transform 0.5s ease; 
-  transform: rotateY(0deg); 
-  backface-visibility: hidden;
+  width: 320px;
+  height: 320px;
+  background-color: rgba(241, 214, 218, 0.5);
+  border-radius: 50%;
+  z-index: -1;
 }
 
-.boxOpen::after,
-.boxMatch::after {
-  transform: rotateY(180deg); 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .text-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .image-section {
+    order: -1; /* Show the image above the text on smaller screens */
+  }
+
+  .image-section img {
+    max-width: 350px;
+  }
+
+  .image-overlay {
+    width: 280px;
+    height: 280px;
+  }
 }
+
+@media (max-width: 480px) {
+  .text-section h1 {
+    font-size: 2rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .image-section img {
+    max-width: 200px;
+  }
+
+  .image-overlay {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* forme */
+
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #f0bbbb;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-right: 40%;
+
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 0 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=SendMessage] {
+  background-color: #cb5d5d;
+  color: white;
+  padding: 12px 10px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+align-items: center;
+margin-right: 38%;
+
+}
+input[type=SendMessage]:hover{
+  background-color: white ;
+  color: #cb5d5d;
+  border: 1px solid #f0bbbb;
+
+}
+
+
+/* Style the container */
+.container1 {
+  border-radius: 5px;
+  background-color: #FFF7F7;
+  padding-bottom: 200px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}
+.h2 {
+ color:  #cb5d5d;
+ text-align: center;
+
+}
+
+ 
+ footer {
+   width: 100%;
+   position: relative;
+   background-color: #ff9090;
+   margin: 0 auto;
+   bottom: 0px;
+   padding: 17px;
+   text-align: center;
+   color: white;
+   font-size: 1.6rem;
+ }
+ footer p {
+   margin-left: 50;
+   margin-top: 0;
+   margin-bottom: 0;
+   padding: 0;
+   color: #fae4e4;
+   font-size:medium;
+   text-align: center;
+ }
+
+ .inji{
+  color: #fae4e4;
+  font-size:medium;
+  text-decoration: none;
+
+ }
